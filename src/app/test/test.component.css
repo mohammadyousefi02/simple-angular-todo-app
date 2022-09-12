@@ -1,0 +1,9 @@
+.selected {
+    color: red;
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}

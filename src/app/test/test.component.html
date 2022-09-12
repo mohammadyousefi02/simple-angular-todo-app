@@ -1,0 +1,15 @@
+<div>
+    <div>
+        <input [(ngModel)]="value" type="text" name="" id="">
+        <button (click)="selectedTodoId ? updateTodo() : addTodo()">{{!selectedTodoId ? "add" : "update"}}</button>
+    </div>
+    <div>
+        <ul>
+            <li *ngFor="let todo of todos" class="todo">
+                <span [class.selected]="todo.id === selectedTodoId">{{todo.title}}</span>
+                <button (click)="deleteTodo(todo.id)">delete</button>
+                <button (click)="editTodo(todo)">edit</button>
+            </li>
+        </ul>
+    </div>
+</div>
